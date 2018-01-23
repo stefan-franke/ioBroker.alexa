@@ -19,6 +19,30 @@
     })(document);
 
 </script>
+ 
+<script type="text/javascript">
+   // document.getElementById('LoginWithAmazon').onclick = function() 
+    
+    function loginWithAmazon() {
+        options = { scope : 'profile', response_type: 'token' };
+        amazon.Login.authorize(options, function(response) {
+            if ( response.error ) {
+                alert('oauth error ' + response.error);
+                return;
+            }
+        
+            AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                IdentityPoolId: 'IDENTITY_POOL_ID',
+                Logins: {
+                    'www.amazon.com': response.access_token
+                }
+            });
+        
+        });
+    }
+</script>
+ 
+ 
 <!-- you have to put your config page in a div with id adapter-container -->
 <div id="adapter-container">
 
@@ -33,25 +57,5 @@
              width="156" height="32" />
     </a>
 </div>
-<script type="text/javascript">
-   // document.getElementById('LoginWithAmazon').onclick = function() 
-    
-    function loginWithAmazon() {
-    options = { scope : 'profile', response_type: 'token' };
-    amazon.Login.authorize(options, function(response) {
-        if ( response.error ) {
-            alert('oauth error ' + response.error);
-            return;
-        }
-        
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-            IdentityPoolId: 'IDENTITY_POOL_ID',
-            Logins: {
-                'www.amazon.com': response.access_token
-            }
-        });
-        
-    };
-</script>
 </body>
 </html>
