@@ -1,0 +1,45 @@
+{
+    "common": {
+        "name": "alexa",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Initialer Release",
+            }
+        },
+        "title": "Alexa Connect Adapter",
+        "desc": {
+            "en": "Connects ioBroker with Alexa through AWS.",
+            "de": "Adapter fragt zyklisch konfigurierte IP Addressen ab",
+            "ru": "Драйвер постоянно опрашивает заданные IP адреса при помощи утилиты PING"
+        },
+        "authors": [
+            "Stefan Franke"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "availableModes": [
+            "daemon",
+            "schedule"
+        ],
+        "schedule": "*/1 * * * *",
+        "readme": "https://github.com/stefan-franke/ioBroker.alexa/blob/master/README.md",
+        "loglevel": "info",
+        "icon": "ping.png",
+        "keywords": [
+            "poll",
+            "ping",
+            "ip"
+        ],
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/admin/ping.png",
+        "type": "network"
+    },
+    "native": {
+        "devices": [],
+        "interval": 60000,
+        "noHostname": false
+    },
+    "objects": []
+}
