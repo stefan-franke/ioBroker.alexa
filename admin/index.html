@@ -27,14 +27,16 @@
         <td style="padding-top: 20px;padding-left: 10px"><h3 class="translate">PING adapter settings</h3></td>
     </tr></table>
 
-    <a href id="LoginWithAmazon">
+    <a href id="LoginWithAmazon" href="#" onClick="loginWithAmazon();">
         <img border="0" alt="Login with Amazon"
              src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
              width="156" height="32" />
     </a>
 </div>
 <script type="text/javascript">
-    document.getElementById('LoginWithAmazon').onclick = function() {
+   // document.getElementById('LoginWithAmazon').onclick = function() 
+    
+    function loginWithAmazon() {
     options = { scope : 'profile', response_type: 'token' };
     amazon.Login.authorize(options, function(response) {
         if ( response.error ) {
@@ -49,7 +51,7 @@
             }
         });
         
-    });
+    };
 </script>
 </body>
 </html>
