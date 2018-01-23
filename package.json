@@ -1,0 +1,29 @@
+{
+  "name": "iobroker.alexa",
+  "description": "Alexa Connect Adapter",
+  "version": "0.0.1",
+  "author": "Stefan Franke",
+  "contributors": [
+    "Stefan Franke"
+  ],
+  "homepage": "https://github.com/stefan-franke/ioBroker.alexa",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "alexa",
+    "home automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefan-franke/ioBroker.alexa"
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-franke/ioBroker.alexa/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --exit"
+  }
+}
