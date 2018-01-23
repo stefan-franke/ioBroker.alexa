@@ -5,14 +5,13 @@
         "news": {
             "0.0.1": {
                 "en": "initial release",
-                "de": "Initialer Release",
+                "de": "Initialer Release"
             }
         },
         "title": "Alexa Connect Adapter",
         "desc": {
             "en": "Connects ioBroker with Alexa through AWS.",
-            "de": "Adapter fragt zyklisch konfigurierte IP Addressen ab",
-            "ru": "Драйвер постоянно опрашивает заданные IP адреса при помощи утилиты PING"
+            "de": "Verbindet ioBroker mit Alexa über AWS."
         },
         "authors": [
             "Stefan Franke"
